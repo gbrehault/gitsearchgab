@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import App from '../App';
-import { githubRequest } from "../utils";
 import { FaSearch } from "react-icons/fa";
 import "./FormSearch.css";
 
 
-const SearchForm = ({ onSubmit }) => {
+const SearchForm = ({ onSubmit, totalCount }) => {
     const [input, setInput] = useState("");
     const submit = (e) => {
         e.preventDefault();
@@ -21,6 +20,7 @@ const SearchForm = ({ onSubmit }) => {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
             />
+            <p className='total'>{totalCount} résultats trouvés</p>
             <button type="submit">Submit</button>
         </form>
     );
