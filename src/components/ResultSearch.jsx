@@ -49,7 +49,6 @@ const ResultSearch = ({ results }) => {
                                 <img src={userData.avatar_url} alt={userData.login} width="100" />
                                 <p><strong>Nom :</strong> {userData.name || "Non renseigné"}</p>
                                 <p><strong>Bio :</strong> {userData.bio || "Non renseignée"}</p>
-                                <p><strong>Location :</strong> {userData.location || "Non renseignée"}</p>
                                 <p><strong>Repos publics :</strong> {userData.public_repos}</p>
                                 <p><strong>Followers :</strong> {userData.followers}</p>
                                 <p><strong>Following :</strong> {userData.following}</p>
