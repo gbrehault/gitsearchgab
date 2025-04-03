@@ -8,7 +8,7 @@ const ResultSearch = ({ results }) => {
 
     useEffect(() => {
         if (selectUser) {
-            console.log("Utilisateur sélectionné :", selectUser); // 🔍 Vérifie l'utilisateur sélectionné
+            console.log("Utilisateur sélectionné :", selectUser);
 
             const fetchUserData = async () => {
                 setLoading(true);
@@ -16,7 +16,7 @@ const ResultSearch = ({ results }) => {
                     const response = await fetch(`https://api.github.com/users/${selectUser.login}`);
                     const data = await response.json();
                     setUserData(data);
-                    console.log("Données utilisateur récupérées :", data); // 🔍 Vérifie les données reçues
+                    console.log("Données utilisateur récupérées :", data);
                 } catch (error) {
                     console.error("Erreur lors de la récupération des données :", error);
                 } finally {
